@@ -4,6 +4,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.charset.Charset;
 import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -26,7 +27,7 @@ public class ¸´ÖÆÑ¹Ëõ°ü {
  
     public static void main(String[] args) throws Exception {
         // read war.zip and write to append.zip
-        ZipFile war = new ZipFile("E://1.zip");
+        ZipFile war = new ZipFile("E://1.zip",Charset.forName("GBK"));
         ZipOutputStream append = new ZipOutputStream(new FileOutputStream("E://3.zip"));
  
         // first, copy contents from existing war
